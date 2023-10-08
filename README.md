@@ -1,5 +1,5 @@
 # Movie-Archive-App
-Movie Archive App Using Python with MovieDB.org
+Movie Archive App Using Python with MovieDB API.
 
 You can claim your own api from https://www.themoviedb.org.
 

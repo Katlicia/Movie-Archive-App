@@ -11,7 +11,7 @@ class MovieDB:
         self.lang_en = "en-GB"
         self.page_num = 1
 
-    # Function to get popular movies.
+    # Method to get popular movies.
 
     def getPopular(self):
         if language == "tr":
@@ -20,7 +20,7 @@ class MovieDB:
             response = requests.get(f"{self.api_url}movie/popular?api_key={self.api_key}&language={self.lang_en}&page={self.page_num}")
         return response.json()
     
-    # Function to get top rated movies.
+    # Method to get top rated movies.
 
     def getTopRated(self):
         if language == "tr":
@@ -29,13 +29,13 @@ class MovieDB:
            response = requests.get(f"{self.api_url}movie/top_rated?api_key={self.api_key}&language={self.lang_en}&page={self.page_num}")
         return response.json()
 
-    # Function to get movies with keywords.
+    # Method to get movies with keywords.
 
     def getSearch(self, keyword):
         response = requests.get(f"{self.api_url}search/keyword?api_key={self.api_key}&query={keyword}&page={self.page_num}")
         return response.json()
 
-    # Function to increase page number.
+    # Method to increase page number.
 
     def increasePageNum(self):
         self.page_num += 1
